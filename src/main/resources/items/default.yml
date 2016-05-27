@@ -1,0 +1,7 @@
+default:
+  inherits:
+    - "iron:default 2500"
+    - "diamond:default 2200"
+    - "ore:default 3300"
+    - "spec:default 1300"
+    - "rare:default 700"

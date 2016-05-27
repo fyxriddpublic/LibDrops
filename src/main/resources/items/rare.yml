@@ -1,0 +1,50 @@
+default:
+  inherits:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
+'0':
+  type: SKULL_ITEM
+  damage: 3
+  chance: 10
+'1':
+  type: SKULL_ITEM
+  chance: 10
+'2':
+  type: SKULL_ITEM
+  damage: 2
+  chance: 10
+'3':
+  type: SKULL_ITEM
+  damage: 4
+  chance: 10
+'4':
+  type: SKULL_ITEM
+  damage: 1
+  chance: 5
+'5':
+  type: SLIME_BALL
+  chance: 15
+'6':
+  type: NETHER_STAR
+  chance: 5
+'7':
+  type: BEACON
+  chance: 5
+'8':
+  type: IRON_BARDING
+  chance: 10
+'9':
+  type: GOLD_BARDING
+  chance: 10
+'10':
+  type: DIAMOND_BARDING
+  chance: 10

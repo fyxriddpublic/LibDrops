@@ -1,0 +1,22 @@
+default:
+  inherits:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+'0':
+  type: LEATHER
+  chance: 50
+'1':
+  type: IRON_INGOT
+  chance: 20
+'2':
+  type: GOLD_INGOT
+  chance: 15
+'3':
+  type: DIAMOND
+  chance: 10
+'4':
+  type: EMERALD
+  chance: 5

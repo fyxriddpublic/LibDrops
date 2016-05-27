@@ -1,0 +1,22 @@
+default:
+  inherits:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+'0':
+  type: BOW
+  chance: 40
+'1':
+  type: CHAINMAIL_HELMET
+  chance: 15
+'2':
+  type: CHAINMAIL_CHESTPLATE
+  chance: 15
+'3':
+  type: CHAINMAIL_LEGGINGS
+  chance: 15
+'4':
+  type: CHAINMAIL_BOOTS
+  chance: 15
