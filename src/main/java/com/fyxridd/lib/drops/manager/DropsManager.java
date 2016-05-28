@@ -137,7 +137,7 @@ public class DropsManager implements Listener {
                                     } catch (Exception e) {
                                         throw new Exception("produce Dropper error: "+e.getMessage(), e);
                                     }
-                                }else CoreApi.debug("DropperFactory not found!");//指定的配置没有被处理,提示
+                                }else CoreApi.debug("DropperFactory for '"+key+"' not found!");//指定的配置没有被处理,提示
                             } catch (Exception e) {
                                 throw new Exception("load key '"+key+"' error: "+e.getMessage(), e);
                             }
