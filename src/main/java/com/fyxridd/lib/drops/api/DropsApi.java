@@ -1,10 +1,19 @@
 package com.fyxridd.lib.drops.api;
 
 import com.fyxridd.lib.drops.DropsPlugin;
+import com.fyxridd.lib.drops.api.model.DropperFactory;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 
 public class DropsApi {
+    /**
+     * 注册掉落器工厂
+     * @param key 注册的键(相当于配置文件中的键)
+     */
+    public static void registerDropperFactory(String key, DropperFactory dropperFactory) {
+        DropsPlugin.instance.getDropsManager().registerDropperFactory(key, dropperFactory);
+    }
+
     /**
      * 重新读取掉落配置
      * 会读取'插件名/drops.yml'文件
@@ -26,15 +35,5 @@ public class DropsApi {
      */
     public static void drop(String plugin, String type, Location loc, Player p) {
         DropsPlugin.instance.getDropsManager().drop(plugin, type, loc, p);
-    }
-
-    /**
-     * 获取掉落
-     * @param plugin 插件
-     * @param type 掉落配置
-     * @return 掉落信息,可为null
-     */
-    public static DropInfo getDrops(String plugin, String type) {
-        return DropsPlugin.instance.getDropsManager().getDrops(plugin, type);
     }
 }

@@ -10,21 +10,20 @@ drops:
 #################################
 #####       掉落信息        #####
 #################################
-#如果未挂钩加强插件,则加强配置名无效
 infos:
-  #提示: 配置可以不全
   zombie_drop:                 #掉落信息名
-    money: "2->5"              #掉落金钱(MultiRandomInt)
-    exp:                        #掉落经验
+    money:                      #掉落金钱(此插件负责解析)
+      value: "2->5"            #(MultiRandomInt)
+    exp:                        #掉落经验(此插件负责解析)
       instant: true             #是否直接加给玩家,false时掉到地上(默认false)
       value: "1->4"           #(MultiRandomInt)
-    item:                     #掉落物品
-      type: "zombie_drop"     #掉落物品获取类型(会使用此配置所属插件的物品类型配置)
-      enchants: ""            #掉落物品附魔类型(会使用此配置所属插件的附魔类型配置)
-    entity:                   #掉落实体
-      types:                  #格式'实体ID/enum值 数量,>=0 概率,>=0 [加强配置名]'
-        - "90 1 100 normal"
-        - "91 1 50"
-    tip:                       #掉落提示
-      lang: 30                 #语言ID(会使用此配置所属插件的语言文本)
+    item:                     #掉落物品(此插件负责解析)
+      getType: "zombie_drop" #掉落物品获取类型(会使用此配置所属插件的物品类型配置)
+      enchantType: ""         #掉落物品附魔类型(会使用此配置所属插件的附魔类型配置)(需要前置LibEnchants插件才会生效)
+    entity:                   #掉落实体(此插件负责解析)
+      values:                  #格式'实体ID/enum值 数量(MultiRandomInt),>=0'
+        - "90 1->2"
+        - "91 0->1"
+    tip:                       #掉落提示(此插件负责解析)
+      lang: 30                 #语言ID(会使用此配置所属插件的语言)
       range: true              #是否范围显示,true时范围显示,false时显示给目标玩家(默认false)

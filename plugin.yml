@@ -1,4 +1,5 @@
 ﻿name: LibDrops
 main: com.fyxridd.lib.drops.DropsPlugin
 version: 0.1.0
-depend: [LibCore, LibItems, LibEnchants]
+depend: [LibCore, LibItems]
+softdepend: [LibEnchants]
