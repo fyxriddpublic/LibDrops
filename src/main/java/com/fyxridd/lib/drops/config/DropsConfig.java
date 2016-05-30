@@ -6,7 +6,7 @@ import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.event.Listener;
 
 public class DropsConfig implements Listener {
-    private class GetItemsCsConverter implements ConfigConvert.ConfigConverter<ConfigurationSection>{
+    private static class GetItemsCsConverter implements ConfigConvert.ConfigConverter<ConfigurationSection>{
         @Override
         public ConfigurationSection convert(String plugin, ConfigurationSection config) throws Exception {
             return config;
